@@ -1,0 +1,1156 @@
+/* shared */
+/* ============= */
+* {
+    box-sizing: border-box;
+
+
+    scroll-behavior: smooth;
+    /* 
+    متشرحتش لسه بس بحثت و لقيتها 
+    و مفيش اى وسيله اخرى غير ديه للحصول على هذا التأثير
+    */
+}
+
+
+body {
+    margin: 0px;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+/* ======= */
+/* navbar */
+/* ======= */
+
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    /* ليه لما بعمله % مش رقم ب البكسل مبيشتغلش !!؟ */
+    position: fixed;
+    background-color: rgb(51, 51, 51);
+    z-index: 2222;
+}
+
+.navbar .leftLogo,
+.navbar .rightTabs {
+    width: fit-content;
+    padding: 18px 0;
+    position: absolute;
+
+
+}
+
+.navbar .leftLogo {
+    left: 100px;
+}
+
+.navbar .leftLogo a,
+.navbar .rightTabs a {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    text-decoration: none;
+
+}
+
+.navbar .leftLogo a {
+    color: #ff305b;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* ======= */
+
+.rightTabs {
+    right: 120px;
+}
+
+
+.navbar .rightTabs a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 20px;
+}
+
+.navbar .rightTabs a:first-child {
+    color: #ff305b;
+}
+
+.navbar .rightTabs a:hover {
+    color: #ff305b;
+}
+
+.navbar .rightTabs a {
+    transition: color 0.5s ease;
+}
+
+
+/* =========== */
+/* slider area */
+/* =========== */
+
+.backphoto {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url("../img/header.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.backphoto .words {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 35%;
+    bottom: 35%;
+    text-align: center;
+}
+
+.hello {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+
+
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #ff305b;
+    margin: 0;
+}
+
+
+.prof {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    color: #fff;
+}
+
+
+/* 
+النقطه التاليه واخدها كوبى من الانترنت
+لانى ضيعت وقت كبير جدا فيها و معرفتش  اعملها
+مش لازم نقطه البونص بقا :(
+ */
+
+
+
+.type {
+    --d: 1s;
+    /* duration */
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.type>span {
+    display: grid;
+    overflow: hidden;
+    height: 2em;
+}
+
+.type span span {
+
+    width: 0%;
+    max-width: max-content;
+    overflow: hidden;
+    height: inherit;
+    white-space: nowrap;
+    animation:
+        cursor-blink 0.7s steps(1) infinite,
+        typing var(--d) linear infinite alternate,
+        move calc(var(--d) * 2 * var(--n)) steps(var(--n)) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0
+    }
+
+    90%,
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes cursor-blink {
+
+    0%,
+    100% {
+        box-shadow: 5px 0 0 transparent
+    }
+
+    50% {
+        box-shadow: 2px 0 0 rgb(255, 255, 255)
+    }
+}
+
+@keyframes move {
+    100% {
+        transform: translateY(calc(-100% * var(--n)))
+    }
+}
+
+
+/* ======== end of 1st section ============== */
+
+/* ======== start of 2nd section ============== */
+
+
+.info {
+    width: 100%;
+    padding: 50px 50px 20px 50px;
+    margin-top: 40px;
+}
+
+
+/* ==right=== */
+
+.RightInfo {
+    float: right;
+    width: 54%;
+}
+
+.helloo {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    font-size: 34px;
+    color: #333333;
+    padding: 0 0 0 13px;
+    position: relative;
+}
+
+
+.helloo::before {
+    content: "";
+    width: 4px;
+    height: 50%;
+    position: absolute;
+    top: 11px;
+    left: 0px;
+    background-color: #ff305b;
+    display: inline-block;
+
+}
+
+
+.paragraph {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    color: #555555;
+    border-bottom: 1px dashed #999999;
+}
+
+
+
+.rightwords {
+    float: right;
+    background-color: #999999;
+    width: 49%;
+}
+
+.lefttwords {
+    float: left;
+    width: 49%;
+
+    background-color: #135830;
+}
+
+
+.button ,button{
+    padding: 15px 20px 15px 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #ff305b;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+
+    transition: background-color 0.5s ease-in-out;
+}
+
+
+.button:hover,button:hover {
+    background-color: #EC2403;
+}
+
+
+.padbuttton a {
+    text-decoration: none;
+}
+
+
+.padbuttton a i {
+    padding-left: 10px;
+}
+
+
+
+.padbuttton2 a {
+    text-decoration: none;
+}
+
+
+.padbuttton2 a i {
+    padding-left: 10px;
+}
+
+
+.padbuttton {
+    margin-top: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.padbuttton2 {
+    display: inline;
+}
+
+
+.RightInfo ul {
+    float: left;
+    list-style: none;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #555555;
+    margin-top: 0;
+    line-height: 40px;
+    width: 100%;
+
+
+}
+
+
+.RightInfo ul li:nth-child(2n) {
+    float: right;
+    width: 65%;
+
+
+}
+
+
+.RightInfo ul li:nth-child(2n+1) {
+    width: 35%;
+    float: left;
+
+
+}
+
+
+.info .RightInfo ul li span {
+    color: #333333;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+
+
+
+/* ==Left=== */
+.LeftInfo {
+    float: left;
+    width: 45%;
+    height: 500px;
+    position: relative;
+
+}
+
+
+.borderr {
+    width: 65%;
+    height: 430px;
+    border: 8px solid #555555;
+    border-radius: 6px;
+    position: absolute;
+    top: 5px;
+    left: 155px;
+}
+
+
+.img-happy {
+    height: 440px;
+    width: 360px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 5px;
+
+}
+
+.parentlayer {
+    height: 440px;
+    width: 360px;
+    position: relative;
+    top: 30px;
+    left: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.layer {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: top 0.5s ease;
+
+}
+
+.parentlayer:hover .layer {
+    top: 0;
+}
+
+
+
+
+.icons1,
+.icons2,
+.icons3,
+.icons4 {
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    transition: color 0.5s ease;
+
+}
+
+.icons1 {
+    left: 25%;
+
+}
+
+.icons2 {
+
+    left: 37.5%;
+
+}
+
+.icons3 {
+
+    left: 50%;
+
+}
+
+
+.icons4 {
+
+    left: 62.5%;
+
+}
+
+.icons1:hover,
+.icons2:hover,
+.icons3:hover,
+.icons4:hover {
+    color: #FF305B;
+}
+
+
+
+/* ======== end of 2nd section ============== */
+
+/* ======== start of 3rd section ============== */
+
+.OurServices {
+    margin-top: 100px;
+    padding: 10px 0 40px;
+    background: #f1f1f1;
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+
+}
+
+
+.cborderline,
+.cborderline2 {
+    border-top: 1px solid #ff305b;
+    margin: 0 auto;
+
+}
+
+
+.cborderline {
+    width: 5%;
+    height: 5px;
+}
+
+
+.cborderline2 {
+
+    width: 12%;
+    height: 5px;
+
+}
+
+/* ======= */
+
+.thrd-Container {
+    margin: 30px 100px 0 100px;
+    height: 260px;
+}
+
+
+.single-service1 {
+    float: left;
+    text-align: center;
+    width: 25%;
+    padding: 50px 1px 50px 1px;
+    height: 100%;
+    border-radius: 3px;
+    transition: background-color 0.5s ease;
+}
+
+
+.inside-single-service1 {
+    width: 100%;
+}
+
+
+.pen-ruler {
+    font-size: 36px;
+    color: #FF305B;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+
+.firsth {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+
+
+.firstp {
+
+    color: #555555;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+
+.single-service1:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 
+مفيش حل يجيب نفس النتيجه غير box-shadow
+اى طريقه تانيه زى انى اعمل بوردر جابتش نفس التأثر
+    resource:
+    https://www.w3schools.com/css/css3_shadows_box.asp */
+
+}
+
+
+
+.single-service1:hover .pen-ruler {
+    transform: scale(1.3);
+
+    /* 
+مفيش حل يجيب نفس النتيجه غير transform
+اى طريقه زى مثلا اكبر الخط مجابتش نفس المنظر
+    resource:
+    https://www.w3schools.com/cssref/css3_pr_transform.php
+ */
+}
+
+
+
+/* ======== end of 3rd section ============== */
+
+/* ======== start of 4th section - part1 ============== */
+
+.OurPortfolio {
+    padding-top: 50px;
+    margin: 0 3% 0 3%;
+}
+
+.liPortfolio-div {
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.liPortfolio {
+    list-style: none;
+}
+
+
+.liPortfolio li {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+}
+
+
+.color-red {
+    /*     resource: 
+    https://www.w3schools.com/cssref/pr_text_text-transform.php */
+    text-transform: uppercase;
+    color: rgb(250, 9, 9);
+}
+
+.color-gray {
+    text-transform: uppercase;
+    color: rgb(51, 51, 51);
+}
+
+
+
+
+.parts-squares {
+    width: 100%;
+    height: 690px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.one-square {
+    width: 360px;
+    height: 269px;
+    margin-top: 3.5%;
+    margin-left: 3.5%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.layer2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: background-color 0.5s ease;
+}
+
+.one-square img {
+    width: 360px;
+    height: 269px;
+}
+
+
+
+.one-square:hover .layer2 {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.icoon {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 19px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #FF305B;
+
+}
+
+.one-square:hover .icoon {
+    opacity: 1;
+}
+
+/* ======== end of 4th section - part1 ============== */
+
+
+/* ======== start of 4th section - part2 ============== */
+
+
+.Numbers {
+    width: 100%;
+    height: 300px;
+    background-color: #F1F1F1;
+    display: inline-block;
+}
+
+.Numbers-element {
+    width: 21%;
+    height: 80%;
+    list-style: none;
+    float: left;
+    margin: 2%;
+    text-align: center;
+    padding-top: 4%;
+
+}
+
+
+.Numbers .Numbers-element span {
+    font-size: 26px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 800;
+    color: #333;
+}
+
+
+
+.Numbers .Numbers-element p {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #555555;
+    margin-top: 5%;
+
+}
+
+
+
+.Numbers .Numbers-element i {
+    color: #ff305b;
+    font-size: 26px;
+}
+
+
+
+.Numbers .Numbers-element div {
+    padding-bottom: 5%;
+}
+
+
+/* ======== end of 4th section - part2 ============== */
+
+/* ======== start of 5th section ============== */
+
+
+.ClientFeedback {
+    padding-top: 40px;
+    width: 100%;
+    height: 600px;
+}
+
+.ClientFeedback-first {
+    padding-bottom: 3%;
+}
+
+.ClientFeedback-rate {
+    background-color: #F1F1F1;
+    width: 56%;
+    height: 275px;
+    margin: 0 auto 0 auto;
+    position: relative;
+    border-radius: 1%;
+    margin-bottom: 8px;
+}
+
+
+.triangle {
+    width: 20%;
+    height: 70%;
+    border-top: 100px solid #FF305B;
+    border-bottom: 100px solid #F1F1F1;
+    border-left: 100px solid #FF305B;
+    border-right: 100px solid #F1F1F1;
+    border-radius: 2% 0 0 0;
+
+}
+
+.ClientFeedback .ClientFeedback-rate img {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}
+
+
+.info-rated {
+    position: absolute;
+    top: 10%;
+    left: 22%;
+    padding-right: 10%;
+}
+
+
+.ClientFeedback .ClientFeedback-rate .info-rated p {
+    font-size: 16px;
+    font-style: italic;
+    color: rgb(85, 85, 85);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 10px;
+
+}
+
+
+.ClientFeedback .ClientFeedback-rate .info-rated h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+
+.ClientFeedback .ClientFeedback-rate .info-rated a {
+
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    color: #777777;
+    font-size: 15px;
+}
+
+
+.ClientFeedback .ClientFeedback-rate .info-rated .review-reating {
+    color: #F1C30D;
+}
+
+.dot-dot-active,
+.dot-dot {
+    position: absolute;
+    border-radius: 10px;
+    height: 10px;
+    cursor: pointer;
+
+}
+
+.dot-dot-active {
+    width: 25px;
+    left: 48%;
+    background-color: #FF305B;
+}
+
+.dot-dot {
+    width: 10px;
+    left: 50%;
+    border: 1px solid #FF305B;
+
+}
+
+
+/* ======== end of 5th section ============== */
+/* ======== start of 6th section ============== */
+.OurBlog {
+    width: 100%;
+    height: 720px;
+    background-color: #F1F1F1;
+    padding-top: 50px;
+}
+
+.main-container-of-readmore {
+    margin: 25px auto 0 auto;
+    width: 85%;
+    height: 400px;
+}
+
+
+.container-of-readmore-left,
+.container-of-readmore,
+.container-of-readmore-right {
+    width: 30%;
+    height: 440px;
+    background-color: #FFFFFF;
+}
+
+.container-of-readmore-left {
+    float: left;
+}
+
+.container-of-readmore {
+    margin: 0 5% 0 5%;
+    display: inline-block;
+}
+
+.container-of-readmore-right {
+    float: right;
+}
+
+
+.img-con {
+    width: 100%;
+    height: 45%;
+}
+
+.span-con {
+    margin-bottom: 10px;
+    color: #555555;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    display: block;
+}
+
+.contain-contariner {
+    margin: 0 5% 0 5%;
+}
+
+.a-co,
+.last-con-info {
+    text-decoration: none;
+    color: #333333;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+}
+
+.p1,
+.last-con-info {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.p1 {
+    color: #555555;
+
+}
+
+.last-con-info {
+    color: #333333;
+}
+
+.a-co:hover {
+    color: #FF305B;
+}
+
+.last-con-info:hover {
+    color: #FF305B;
+
+}
+
+
+iframe{
+    border: none;
+    width: 100%; 
+    height: 45%;
+}
+
+
+/* ======== end of 6th section ============== */
+/* ======== start of 7th section ============== */
+
+.Contact-US {
+    width: 100%;
+    height: 600px;
+    padding-top: 30px;
+    /* border: 2px solid red; */
+}
+
+.form1 {
+    margin: 2% auto 0 auto;
+    /* border: 2px solid red; */
+    width: 55%;
+    height: 60%;
+}
+
+
+/* 
+resource :
+https://developer.mozilla.org/en-US/docs/Web/CSS/::placeholder */
+input::placeholder {
+    color: #5555559c;
+
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .075);
+    margin-bottom: 5%;
+    padding-left: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.input1 {
+    width: 100%;
+    height: 40px;
+}
+
+.input1-move {
+    width: 48%;
+    height: 40px;
+    display: inline-block;
+}
+
+.input2 {
+    width: 100%;
+    height: 40px;
+}
+
+.input2-move {
+    width: 48%;
+    height: 40px;
+    float: right;
+}
+
+.input3 {
+    width: 100%;
+    height: 40px;
+}
+
+.input3-move {
+    width: 100%;
+    height: 40px;
+    padding-top: 4%;
+    padding-bottom: 6%;
+
+}
+
+
+
+
+
+
+.input4 {
+    width: 100%;
+}
+
+.input4-move {
+    width: 100%;
+    padding-top: 4%;
+}
+
+textarea::placeholder {
+    color: #5555559c;
+    padding-top: 2px;
+
+}
+
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .075);
+    margin-bottom: 3%;
+    padding-left: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* 
+resource
+https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome */
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border: 1px solid rgb(255, 40, 91);
+    box-shadow: none;
+}
+
+
+.Contact-US .form1 form button{
+    padding: 10px 20px 10px 20px;
+cursor: pointer;
+}
+
+
+/* ======== end of 7th section ============== */
+/* ======== start of 8th section ============== */
+
+.footerr {
+    width: 100%;
+    height: 170px;
+    background-color: rgb(51, 51, 51);
+    position: relative;
+}
+
+.icons11,
+.icons21,
+.icons31,
+.icons41 {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    transition: color 0.5s ease;
+}
+
+.icons11 {
+    left: 45%;
+}
+
+.icons21 {
+    left: 48.3333%;
+}
+
+.icons31 {
+    left: 51.6666%;
+}
+
+
+.icons41 {
+    left: 55%;
+}
+
+.icons11:hover,
+.icons21:hover,
+.icons31:hover,
+.icons41:hover {
+    color: #FF305B;
+}
+
+
+.last-paragraph {
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    position: relative;
+    top: 60%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.color-link {
+    color: #ff305b;
+    text-decoration: none;
+
+}
+
+/* ======== end of 8th section ============== */
